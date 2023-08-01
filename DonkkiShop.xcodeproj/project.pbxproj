@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86CDBE2C2A6EFF3C00F1F947 /* DonkkiShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE2B2A6EFF3C00F1F947 /* DonkkiShopApp.swift */; };
+		86CDBE2E2A6EFF3C00F1F947 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE2D2A6EFF3C00F1F947 /* ContentView.swift */; };
+		86CDBE302A6EFF4000F1F947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CDBE2F2A6EFF4000F1F947 /* Assets.xcassets */; };
+		86CDBE342A6EFF4000F1F947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86CDBE332A6EFF4000F1F947 /* Preview Assets.xcassets */; };
+		86CDBE3E2A6EFF4000F1F947 /* DonkkiShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE3D2A6EFF4000F1F947 /* DonkkiShopTests.swift */; };
+		86CDBE482A6EFF4000F1F947 /* DonkkiShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE472A6EFF4000F1F947 /* DonkkiShopUITests.swift */; };
+		86CDBE4A2A6EFF4000F1F947 /* DonkkiShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE492A6EFF4000F1F947 /* DonkkiShopUITestsLaunchTests.swift */; };
+		86CDBE592A72B61500F1F947 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE582A72B61500F1F947 /* Data.swift */; };
+		86CDBE5B2A72C0D900F1F947 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE5A2A72C0D900F1F947 /* HomeView.swift */; };
+		86CDBE5D2A72C34A00F1F947 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE5C2A72C34A00F1F947 /* AccountView.swift */; };
+		86CDBE5F2A72C46400F1F947 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE5E2A72C46400F1F947 /* CartView.swift */; };
+		86CDBE612A72C73000F1F947 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE602A72C73000F1F947 /* HelpView.swift */; };
+		86CDBE632A72CB0900F1F947 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE622A72CB0900F1F947 /* GridView.swift */; };
+		86CDBE652A7416A800F1F947 /* DonkkiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE642A7416A800F1F947 /* DonkkiView.swift */; };
+		86CDBE672A742D5D00F1F947 /* DonkkiCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE662A742D5D00F1F947 /* DonkkiCard.swift */; };
+		86CDBE692A7801AF00F1F947 /* HelpCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE682A7801AF00F1F947 /* HelpCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86CDBE3A2A6EFF4000F1F947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86CDBE202A6EFF3C00F1F947 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86CDBE272A6EFF3C00F1F947;
+			remoteInfo = DonkkiShop;
+		};
+		86CDBE442A6EFF4000F1F947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86CDBE202A6EFF3C00F1F947 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86CDBE272A6EFF3C00F1F947;
+			remoteInfo = DonkkiShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86CDBE282A6EFF3C00F1F947 /* DonkkiShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DonkkiShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86CDBE2B2A6EFF3C00F1F947 /* DonkkiShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiShopApp.swift; sourceTree = "<group>"; };
+		86CDBE2D2A6EFF3C00F1F947 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86CDBE2F2A6EFF4000F1F947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86CDBE312A6EFF4000F1F947 /* DonkkiShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DonkkiShop.entitlements; sourceTree = "<group>"; };
+		86CDBE332A6EFF4000F1F947 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86CDBE392A6EFF4000F1F947 /* DonkkiShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonkkiShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86CDBE3D2A6EFF4000F1F947 /* DonkkiShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiShopTests.swift; sourceTree = "<group>"; };
+		86CDBE432A6EFF4000F1F947 /* DonkkiShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DonkkiShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86CDBE472A6EFF4000F1F947 /* DonkkiShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiShopUITests.swift; sourceTree = "<group>"; };
+		86CDBE492A6EFF4000F1F947 /* DonkkiShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		86CDBE582A72B61500F1F947 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		86CDBE5A2A72C0D900F1F947 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		86CDBE5C2A72C34A00F1F947 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		86CDBE5E2A72C46400F1F947 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		86CDBE602A72C73000F1F947 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		86CDBE622A72CB0900F1F947 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		86CDBE642A7416A800F1F947 /* DonkkiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiView.swift; sourceTree = "<group>"; };
+		86CDBE662A742D5D00F1F947 /* DonkkiCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiCard.swift; sourceTree = "<group>"; };
+		86CDBE682A7801AF00F1F947 /* HelpCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86CDBE252A6EFF3C00F1F947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CDBE362A6EFF4000F1F947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CDBE402A6EFF4000F1F947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86CDBE1F2A6EFF3C00F1F947 = {
+			isa = PBXGroup;
+			children = (
+				86CDBE2A2A6EFF3C00F1F947 /* DonkkiShop */,
+				86CDBE3C2A6EFF4000F1F947 /* DonkkiShopTests */,
+				86CDBE462A6EFF4000F1F947 /* DonkkiShopUITests */,
+				86CDBE292A6EFF3C00F1F947 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86CDBE292A6EFF3C00F1F947 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86CDBE282A6EFF3C00F1F947 /* DonkkiShop.app */,
+				86CDBE392A6EFF4000F1F947 /* DonkkiShopTests.xctest */,
+				86CDBE432A6EFF4000F1F947 /* DonkkiShopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86CDBE2A2A6EFF3C00F1F947 /* DonkkiShop */ = {
+			isa = PBXGroup;
+			children = (
+				86CDBE2B2A6EFF3C00F1F947 /* DonkkiShopApp.swift */,
+				86CDBE2D2A6EFF3C00F1F947 /* ContentView.swift */,
+				86CDBE5A2A72C0D900F1F947 /* HomeView.swift */,
+				86CDBE662A742D5D00F1F947 /* DonkkiCard.swift */,
+				86CDBE642A7416A800F1F947 /* DonkkiView.swift */,
+				86CDBE5C2A72C34A00F1F947 /* AccountView.swift */,
+				86CDBE5E2A72C46400F1F947 /* CartView.swift */,
+				86CDBE602A72C73000F1F947 /* HelpView.swift */,
+				86CDBE682A7801AF00F1F947 /* HelpCard.swift */,
+				86CDBE622A72CB0900F1F947 /* GridView.swift */,
+				86CDBE582A72B61500F1F947 /* Data.swift */,
+				86CDBE2F2A6EFF4000F1F947 /* Assets.xcassets */,
+				86CDBE312A6EFF4000F1F947 /* DonkkiShop.entitlements */,
+				86CDBE322A6EFF4000F1F947 /* Preview Content */,
+			);
+			path = DonkkiShop;
+			sourceTree = "<group>";
+		};
+		86CDBE322A6EFF4000F1F947 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				86CDBE332A6EFF4000F1F947 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86CDBE3C2A6EFF4000F1F947 /* DonkkiShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				86CDBE3D2A6EFF4000F1F947 /* DonkkiShopTests.swift */,
+			);
+			path = DonkkiShopTests;
+			sourceTree = "<group>";
+		};
+		86CDBE462A6EFF4000F1F947 /* DonkkiShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				86CDBE472A6EFF4000F1F947 /* DonkkiShopUITests.swift */,
+				86CDBE492A6EFF4000F1F947 /* DonkkiShopUITestsLaunchTests.swift */,
+			);
+			path = DonkkiShopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86CDBE272A6EFF3C00F1F947 /* DonkkiShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86CDBE4D2A6EFF4000F1F947 /* Build configuration list for PBXNativeTarget "DonkkiShop" */;
+			buildPhases = (
+				86CDBE242A6EFF3C00F1F947 /* Sources */,
+				86CDBE252A6EFF3C00F1F947 /* Frameworks */,
+				86CDBE262A6EFF3C00F1F947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DonkkiShop;
+			productName = DonkkiShop;
+			productReference = 86CDBE282A6EFF3C00F1F947 /* DonkkiShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86CDBE382A6EFF4000F1F947 /* DonkkiShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86CDBE502A6EFF4000F1F947 /* Build configuration list for PBXNativeTarget "DonkkiShopTests" */;
+			buildPhases = (
+				86CDBE352A6EFF4000F1F947 /* Sources */,
+				86CDBE362A6EFF4000F1F947 /* Frameworks */,
+				86CDBE372A6EFF4000F1F947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86CDBE3B2A6EFF4000F1F947 /* PBXTargetDependency */,
+			);
+			name = DonkkiShopTests;
+			productName = DonkkiShopTests;
+			productReference = 86CDBE392A6EFF4000F1F947 /* DonkkiShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		86CDBE422A6EFF4000F1F947 /* DonkkiShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86CDBE532A6EFF4000F1F947 /* Build configuration list for PBXNativeTarget "DonkkiShopUITests" */;
+			buildPhases = (
+				86CDBE3F2A6EFF4000F1F947 /* Sources */,
+				86CDBE402A6EFF4000F1F947 /* Frameworks */,
+				86CDBE412A6EFF4000F1F947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86CDBE452A6EFF4000F1F947 /* PBXTargetDependency */,
+			);
+			name = DonkkiShopUITests;
+			productName = DonkkiShopUITests;
+			productReference = 86CDBE432A6EFF4000F1F947 /* DonkkiShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86CDBE202A6EFF3C00F1F947 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					86CDBE272A6EFF3C00F1F947 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					86CDBE382A6EFF4000F1F947 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 86CDBE272A6EFF3C00F1F947;
+					};
+					86CDBE422A6EFF4000F1F947 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 86CDBE272A6EFF3C00F1F947;
+					};
+				};
+			};
+			buildConfigurationList = 86CDBE232A6EFF3C00F1F947 /* Build configuration list for PBXProject "DonkkiShop" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86CDBE1F2A6EFF3C00F1F947;
+			productRefGroup = 86CDBE292A6EFF3C00F1F947 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86CDBE272A6EFF3C00F1F947 /* DonkkiShop */,
+				86CDBE382A6EFF4000F1F947 /* DonkkiShopTests */,
+				86CDBE422A6EFF4000F1F947 /* DonkkiShopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86CDBE262A6EFF3C00F1F947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86CDBE342A6EFF4000F1F947 /* Preview Assets.xcassets in Resources */,
+				86CDBE302A6EFF4000F1F947 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CDBE372A6EFF4000F1F947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CDBE412A6EFF4000F1F947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86CDBE242A6EFF3C00F1F947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86CDBE5D2A72C34A00F1F947 /* AccountView.swift in Sources */,
+				86CDBE672A742D5D00F1F947 /* DonkkiCard.swift in Sources */,
+				86CDBE2E2A6EFF3C00F1F947 /* ContentView.swift in Sources */,
+				86CDBE632A72CB0900F1F947 /* GridView.swift in Sources */,
+				86CDBE5F2A72C46400F1F947 /* CartView.swift in Sources */,
+				86CDBE652A7416A800F1F947 /* DonkkiView.swift in Sources */,
+				86CDBE612A72C73000F1F947 /* HelpView.swift in Sources */,
+				86CDBE2C2A6EFF3C00F1F947 /* DonkkiShopApp.swift in Sources */,
+				86CDBE5B2A72C0D900F1F947 /* HomeView.swift in Sources */,
+				86CDBE592A72B61500F1F947 /* Data.swift in Sources */,
+				86CDBE692A7801AF00F1F947 /* HelpCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CDBE352A6EFF4000F1F947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86CDBE3E2A6EFF4000F1F947 /* DonkkiShopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CDBE3F2A6EFF4000F1F947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86CDBE4A2A6EFF4000F1F947 /* DonkkiShopUITestsLaunchTests.swift in Sources */,
+				86CDBE482A6EFF4000F1F947 /* DonkkiShopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86CDBE3B2A6EFF4000F1F947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86CDBE272A6EFF3C00F1F947 /* DonkkiShop */;
+			targetProxy = 86CDBE3A2A6EFF4000F1F947 /* PBXContainerItemProxy */;
+		};
+		86CDBE452A6EFF4000F1F947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86CDBE272A6EFF3C00F1F947 /* DonkkiShop */;
+			targetProxy = 86CDBE442A6EFF4000F1F947 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		86CDBE4B2A6EFF4000F1F947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86CDBE4C2A6EFF4000F1F947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		86CDBE4E2A6EFF4000F1F947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DonkkiShop/DonkkiShop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DonkkiShop/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nbc.DonkkiShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86CDBE4F2A6EFF4000F1F947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DonkkiShop/DonkkiShop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DonkkiShop/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nbc.DonkkiShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		86CDBE512A6EFF4000F1F947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nbc.DonkkiShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DonkkiShop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DonkkiShop";
+			};
+			name = Debug;
+		};
+		86CDBE522A6EFF4000F1F947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nbc.DonkkiShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DonkkiShop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DonkkiShop";
+			};
+			name = Release;
+		};
+		86CDBE542A6EFF4000F1F947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nbc.DonkkiShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DonkkiShop;
+			};
+			name = Debug;
+		};
+		86CDBE552A6EFF4000F1F947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nbc.DonkkiShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DonkkiShop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86CDBE232A6EFF3C00F1F947 /* Build configuration list for PBXProject "DonkkiShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86CDBE4B2A6EFF4000F1F947 /* Debug */,
+				86CDBE4C2A6EFF4000F1F947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86CDBE4D2A6EFF4000F1F947 /* Build configuration list for PBXNativeTarget "DonkkiShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86CDBE4E2A6EFF4000F1F947 /* Debug */,
+				86CDBE4F2A6EFF4000F1F947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86CDBE502A6EFF4000F1F947 /* Build configuration list for PBXNativeTarget "DonkkiShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86CDBE512A6EFF4000F1F947 /* Debug */,
+				86CDBE522A6EFF4000F1F947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86CDBE532A6EFF4000F1F947 /* Build configuration list for PBXNativeTarget "DonkkiShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86CDBE542A6EFF4000F1F947 /* Debug */,
+				86CDBE552A6EFF4000F1F947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86CDBE202A6EFF3C00F1F947 /* Project object */;
+}
