@@ -9,10 +9,21 @@ import SwiftUI
 
 struct CartView: View {
     
+    @EnvironmentObject var user: User
+    
     var body: some View {
-        List(donkkiList) { donkki in
-            NavigationLink(destination: DonkkiView(donkki: donkki)) {
-                DonkkiCard(donkki: donkki)
+        if user.cart.isEmpty {
+            Text("Your cart is empty.")
+                .foregroundColor(.secondary)
+                .font(.subheadline)
+        } else {
+            Text(String(user.cart.count) + " Items")
+                .foregroundColor(.primary)
+                .font(.headline)
+            List(user.cart) { donkki in
+                NavigationLink(destination: DonkkiView(donkki: donkki)) {
+                    DonkkiCard(donkki: donkki)
+                }
             }
         }
     }

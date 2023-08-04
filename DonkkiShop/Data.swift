@@ -55,10 +55,18 @@ let information = Info(
 var donkkiList = [
     Donkki(name: "Don", price: 1.99, image: "donkey"),
     Donkki(name: "Nikki", price: 2.99, image: "donkey"),
+    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
+    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
+    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
+    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
+    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
     Donkki(name: "Gavin", price: 3.99, image: "donkey")
 ]
 
-var helpList = [
-    Text("help11"),
-    Text("help22")
-]
+class User: ObservableObject {
+    @Published var cart: [Donkki]
+    
+    init(cart: [Donkki]) {
+        self.cart = cart
+    }
+}

@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     // Define any variables that ContentView needs outside of body
+    @EnvironmentObject var user: User
     
     // Any code that defines a view is in the view's body
     var body: some View {

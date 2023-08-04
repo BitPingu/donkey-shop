@@ -14,5 +14,6 @@ struct HomeView: View {
                 DonkkiCard(donkki: donkki)
             }
         }
+        .listStyle(.plain)
     }
 }
