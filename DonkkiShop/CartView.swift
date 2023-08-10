@@ -16,6 +16,7 @@ struct CartView: View {
             Text("Your cart is empty.")
                 .foregroundColor(.secondary)
                 .font(.subheadline)
+                .navigationTitle("My Shopping Cart")
         } else {
             Text(String(user.cart.count) + " Items")
                 .foregroundColor(.primary)
@@ -25,6 +26,7 @@ struct CartView: View {
                     DonkkiCard(donkki: donkki)
                 }
             }
+            .navigationTitle("My Shopping Cart")
         }
     }
     
