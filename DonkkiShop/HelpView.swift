@@ -24,6 +24,5 @@ struct HelpView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .padding(20)
-        .navigationTitle("Support")
     }
 }

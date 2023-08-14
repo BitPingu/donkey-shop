@@ -15,6 +15,7 @@ struct DonkkiView: View {
     @State private var showAlert = false
     @State private var buttonDelay = false
     
+ 
     var body: some View {
         VStack(alignment: .leading) {
             Image(donkki.image)
@@ -31,7 +32,7 @@ struct DonkkiView: View {
                     .font(.title2)
                 Spacer().frame(height: 20)
                 Button("Add to Cart") {
-                    user.cart.append(donkki)
+                    user.addItem(item: donkki)
                     showAlert.toggle()
                     buttonDelay = true
                     DispatchQueue.global(qos: .background).async {

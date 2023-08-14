@@ -26,22 +26,22 @@ struct ContentView: View {
             // To make a tab, create an instance of the view you want to display when someone taps a tab
             // The first tab view in the list is HomeView, so it's the first tab you see
             TabbedNavView(tag: 1) {
-                HomeView()
+                HomeView().navigationTitle("Donkki Shop")
             }
             .tabItem { Label("Home", systemImage: "house") }
             .tag(1)
             TabbedNavView(tag: 2) {
-                AccountView()
+                AccountView().navigationTitle("My Account")
             }
             .tabItem { Label("Account", systemImage: "person") }
             .tag(2)
             TabbedNavView(tag: 3) {
-                CartView()
+                CartView().navigationTitle("My Shopping Cart")
             }
             .tabItem { Label("Cart", systemImage: "cart") }
             .tag(3)
             TabbedNavView(tag: 4) {
-                HelpView()
+                HelpView().navigationTitle("Support")
             }
             .tabItem { Label("Help", systemImage: "questionmark.circle") }
             .tag(4)

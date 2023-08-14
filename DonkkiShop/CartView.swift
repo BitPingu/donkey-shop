@@ -16,17 +16,18 @@ struct CartView: View {
             Text("Your cart is empty.")
                 .foregroundColor(.secondary)
                 .font(.subheadline)
-                .navigationTitle("My Shopping Cart")
         } else {
-            Text(String(user.cart.count) + " Items")
-                .foregroundColor(.primary)
-                .font(.headline)
-            List(user.cart) { donkki in
-                NavigationLink(destination: DonkkiView(donkki: donkki)) {
-                    DonkkiCard(donkki: donkki)
+            VStack {
+                Text(String(user.countItems()) + " Items")
+                    .foregroundColor(.primary)
+                    .font(.headline)
+                List(user.cart) { item in
+                    NavigationLink(destination: DonkkiView(donkki: item.donkki)) {
+                        ItemCard(item: item)
+                    }
                 }
+                Text("End items")
             }
-            .navigationTitle("My Shopping Cart")
         }
     }
     

@@ -21,6 +21,7 @@
 		86CDBE672A742D5D00F1F947 /* DonkkiCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE662A742D5D00F1F947 /* DonkkiCard.swift */; };
 		86CDBE692A7801AF00F1F947 /* HelpCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE682A7801AF00F1F947 /* HelpCard.swift */; };
 		86CDBE6C2A7D30A400F1F947 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 86CDBE6B2A7D30A400F1F947 /* AlertToast */; };
+		86CDBE6E2A86872600F1F947 /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE6D2A86872600F1F947 /* ItemCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		86CDBE642A7416A800F1F947 /* DonkkiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiView.swift; sourceTree = "<group>"; };
 		86CDBE662A742D5D00F1F947 /* DonkkiCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonkkiCard.swift; sourceTree = "<group>"; };
 		86CDBE682A7801AF00F1F947 /* HelpCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCard.swift; sourceTree = "<group>"; };
+		86CDBE6D2A86872600F1F947 /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				86CDBE2D2A6EFF3C00F1F947 /* ContentView.swift */,
 				86CDBE5A2A72C0D900F1F947 /* HomeView.swift */,
 				86CDBE662A742D5D00F1F947 /* DonkkiCard.swift */,
+				86CDBE6D2A86872600F1F947 /* ItemCard.swift */,
 				86CDBE642A7416A800F1F947 /* DonkkiView.swift */,
 				86CDBE5C2A72C34A00F1F947 /* AccountView.swift */,
 				86CDBE5E2A72C46400F1F947 /* CartView.swift */,
@@ -184,6 +187,7 @@
 				86CDBE2C2A6EFF3C00F1F947 /* DonkkiShopApp.swift in Sources */,
 				86CDBE5B2A72C0D900F1F947 /* HomeView.swift in Sources */,
 				86CDBE592A72B61500F1F947 /* Data.swift in Sources */,
+				86CDBE6E2A86872600F1F947 /* ItemCard.swift in Sources */,
 				86CDBE692A7801AF00F1F947 /* HelpCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
