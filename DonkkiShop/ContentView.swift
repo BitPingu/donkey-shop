@@ -83,6 +83,5 @@ struct TabbedNavView: View {
                     }
                 }
         }
-        .navigationViewStyle(.stack)
     }
 }

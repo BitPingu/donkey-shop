@@ -51,6 +51,14 @@ class User: ObservableObject {
         }
     }
     
+    func subtotal() -> Float {
+        var cost = Float(0)
+        for item in self.cart {
+            cost += item.donkki.price * Float(item.amount)
+        }
+        return cost
+    }
+    
     func countItems() -> Int {
         var count = 0
         for item in self.cart {

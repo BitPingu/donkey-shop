@@ -18,15 +18,29 @@ struct CartView: View {
                 .font(.subheadline)
         } else {
             VStack {
-                Text(String(user.countItems()) + " Items")
-                    .foregroundColor(.primary)
-                    .font(.headline)
+                HStack {
+                    Text("Subtotal: $" + String(format: "%.2f", user.subtotal()))
+                        .foregroundColor(.primary)
+                        .font(.headline)
+                    Spacer()
+                    Text(String(user.countItems()) + " Items")
+                        .foregroundColor(.primary)
+                        .font(.headline)
+                }
+                .padding([.leading, .trailing], 10)
                 List(user.cart) { item in
                     NavigationLink(destination: DonkkiView(donkki: item.donkki)) {
                         ItemCard(item: item)
                     }
                 }
-                Text("End items")
+                Button(action: {
+                    
+                }, label: {
+                    Text("Checkout")
+                        .frame(maxWidth: .infinity)
+                })
+                .buttonStyle(.borderedProminent)
+                .padding([.leading, .trailing, .bottom], 10)
             }
         }
     }
