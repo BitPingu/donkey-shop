@@ -51,6 +51,18 @@ class User: ObservableObject {
         }
     }
     
+    func removeItem(item: Donkki) {
+        for (index, element) in self.cart.enumerated() {
+            if (element.donkki.name == item.name) {
+                if (element.amount > 1) {
+                    self.cart[index].amount -= 1
+                } else {
+                    self.cart.remove(at: index)
+                }
+            }
+        }
+    }
+    
     func subtotal() -> Float {
         var cost = Float(0)
         for item in self.cart {

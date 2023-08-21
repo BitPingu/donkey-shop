@@ -8,10 +8,43 @@
 import SwiftUI
 
 struct ItemCard: View {
+    @EnvironmentObject var user: User
+    @State private var showAlert = false
     var item: Item
     
     var body: some View {
         HStack {
+            VStack {
+                Image(systemName: "plus")
+                    .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                    .onTapGesture {
+                        user.addItem(item: item.donkki)
+                    }
+                Spacer().frame(height: 30)
+                Image(systemName: "trash")
+                    .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                    .onTapGesture {
+                        if (item.amount == 1) {
+                            showAlert = true
+                        } else {
+                            user.removeItem(item: item.donkki)
+                        }
+                    }
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Are you sure you want to remove " + item.donkki.name + " from your cart?"),
+                            primaryButton: .default(
+                                Text("Cancel")
+                            ),
+                            secondaryButton: .destructive(
+                                Text("Delete"),
+                                action: {
+                                    user.removeItem(item: item.donkki)
+                                }
+                            )
+                        )
+                    }
+            }
             Image(item.donkki.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
