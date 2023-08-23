@@ -37,6 +37,8 @@ var donkkiList = [
 
 class User: ObservableObject {
     @Published var cart = [Item]()
+    let name = "Gavin Eugenio"
+    let email = "gavin.eugenio@gmail.com"
     
     func addItem(item: Donkki) {
         var exists = false
@@ -63,19 +65,43 @@ class User: ObservableObject {
         }
     }
     
-    func subtotal() -> Float {
-        var cost = Float(0)
-        for item in self.cart {
-            cost += item.donkki.price * Float(item.amount)
-        }
-        return cost
-    }
-    
     func countItems() -> Int {
         var count = 0
         for item in self.cart {
             count += item.amount
         }
         return count
+    }
+    
+    func itemTotal(item: Item) -> Float {
+        return item.donkki.price * Float(item.amount)
+    }
+    
+    func subtotal() -> Float {
+        var cost = Float(0)
+        for item in self.cart {
+            cost += itemTotal(item: item)
+        }
+        return cost
+    }
+    
+    func shippingTotal() -> Float {
+        var cost = Float(0)
+        for item in self.cart {
+            cost += 0.5 * Float(item.amount)
+        }
+        return cost
+    }
+    
+    func subShippingTotal() -> Float {
+        return subtotal() + shippingTotal()
+    }
+    
+    func taxTotal() -> Float {
+        return subShippingTotal() * 0.13
+    }
+    
+    func orderTotal() -> Float {
+        return subShippingTotal() + taxTotal()
     }
 }

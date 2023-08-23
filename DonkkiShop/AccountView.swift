@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AccountView: View {
+    @EnvironmentObject var user: User
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -19,10 +20,10 @@ struct AccountView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 90.0, height: 90.0)
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("Gavin Eugenio")
+                    Text(user.name)
                         .foregroundColor(.primary)
                         .font(.headline)
-                    Text("gavin.eugenio@donkki.ca")
+                    Text(user.email)
                         .foregroundColor(.secondary)
                         .font(.subheadline)
                 }

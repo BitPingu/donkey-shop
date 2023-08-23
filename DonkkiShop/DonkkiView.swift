@@ -15,14 +15,13 @@ struct DonkkiView: View {
     @State private var showAlert = false
     @State private var buttonDelay = false
     
- 
     var body: some View {
         VStack(alignment: .leading) {
             Image(donkki.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity, maxHeight: 400.0)
-                .background(Color.gray.opacity(0.1))
+                .background(Color.gray.opacity(0.2))
             VStack(alignment: .leading) {
                 Text(donkki.name)
                     .foregroundColor(.primary)
@@ -45,12 +44,12 @@ struct DonkkiView: View {
                 .buttonStyle(.bordered)
                 .disabled(buttonDelay == true)
             }
-            .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 0))
+            .padding([.leading], 20)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .toast(isPresenting: $showAlert, duration: 2, tapToDismiss: false) {
             AlertToast(type: .regular,
                        title: "1 " + donkki.name + " has been added to your cart.")
         }
+        .padding([.top], -80)
     }
 }

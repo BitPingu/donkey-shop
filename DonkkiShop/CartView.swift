@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct CartView: View {
-    
     @EnvironmentObject var user: User
-    @State private var action: Int? = 0
+    @State var checkout = false
+    
+    @State private var showAlert = false
+    @State private var buttonDelay = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -37,13 +41,30 @@ struct CartView: View {
                 }
             }
             Button(action: {
-                print("checkout")
+                if (user.cart.isEmpty) {
+                    showAlert.toggle()
+                    buttonDelay = true
+                    DispatchQueue.global(qos: .background).async {
+                        sleep(2)
+                        DispatchQueue.main.async {
+                            buttonDelay = false
+                        }
+                    }
+                } else {
+                    checkout = true
+                }
             }, label: {
                 Text("Checkout")
                     .frame(maxWidth: .infinity)
             })
             .buttonStyle(.borderedProminent)
             .padding([.leading, .trailing, .bottom], 10)
+            .disabled(buttonDelay == true)
+            NavigationLink(destination: CheckoutView(), isActive: $checkout) { }
+        }
+        .toast(isPresenting: $showAlert, duration: 2, tapToDismiss: false) {
+            AlertToast(type: .regular,
+                       title: "There are no items in your cart!")
         }
     }
     
