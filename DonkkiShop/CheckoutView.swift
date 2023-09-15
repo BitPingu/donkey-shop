@@ -9,11 +9,18 @@ import SwiftUI
 
 struct CheckoutView: View {
     @EnvironmentObject var user: User
+    @Binding var isActive: Bool
+    
+    var order: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
             VStack {
-                Text("Shipping to: " + user.name)
+                if !order {
+                    Text("Shipping to: " + user.name)
+                } else {
+                    Text("Order Receipt")
+                }
                 Divider()
                 ForEach(user.cart) { item in
                     HStack {
@@ -56,14 +63,18 @@ struct CheckoutView: View {
             }
             .padding([.leading, .trailing], 20)
             Spacer()
-            Button(action: {
-                print("order placed")
-            }, label: {
-                Text("Place your order")
-                    .frame(maxWidth: .infinity)
-            })
-            .buttonStyle(.borderedProminent)
-            .padding([.leading, .trailing, .bottom], 10)
+            if !order {
+                Button(action: {
+                    print("order placed")
+                    user.addOrder()
+                    self.isActive.toggle()
+                }, label: {
+                    Text("Place your order")
+                        .frame(maxWidth: .infinity)
+                })
+                .buttonStyle(.borderedProminent)
+                .padding([.leading, .trailing, .bottom], 10)
+            }
         }
         .padding([.top], -40)
     }

@@ -36,7 +36,7 @@ struct CartView: View {
             } else {
                 List(user.cart) { item in
                     NavigationLink(destination: DonkkiView(donkki: item.donkki)) {
-                        ItemCard(item: item)
+                        ItemCard(item: item, order: false)
                     }
                 }
             }
@@ -60,7 +60,7 @@ struct CartView: View {
             .buttonStyle(.borderedProminent)
             .padding([.leading, .trailing, .bottom], 10)
             .disabled(buttonDelay == true)
-            NavigationLink(destination: CheckoutView(), isActive: $checkout) { }
+            NavigationLink(destination: CheckoutView(isActive: $checkout, order: false), isActive: $checkout) { }
         }
         .toast(isPresenting: $showAlert, duration: 2, tapToDismiss: false) {
             AlertToast(type: .regular,

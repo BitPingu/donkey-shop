@@ -11,51 +11,54 @@ struct ItemCard: View {
     @EnvironmentObject var user: User
     @State private var showAlert = false
     var item: Item
+    var order: Bool
     
     var body: some View {
         HStack {
-            VStack {
-                Image(systemName: "plus")
-                    .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-                    .frame(width: 30, height: 30)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(20)
-                    .onTapGesture {
-                        user.addItem(item: item.donkki)
-                    }
-                Spacer().frame(height: 20)
-                if (item.amount == 1) {
-                    Image(systemName: "trash")
+            if !order {
+                VStack {
+                    Image(systemName: "plus")
                         .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
                         .frame(width: 30, height: 30)
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(20)
                         .onTapGesture {
-                            showAlert = true
+                            user.addItem(item: item.donkki)
                         }
-                        .alert(isPresented: $showAlert) {
-                            Alert(
-                                title: Text("Are you sure you want to remove " + item.donkki.name + " from your cart?"),
-                                primaryButton: .default(
-                                    Text("Cancel")
-                                ),
-                                secondaryButton: .destructive(
-                                    Text("Delete"),
-                                    action: {
-                                        user.removeItem(item: item.donkki)
-                                    }
+                    Spacer().frame(height: 20)
+                    if (item.amount == 1) {
+                        Image(systemName: "trash")
+                            .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                            .frame(width: 30, height: 30)
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(20)
+                            .onTapGesture {
+                                showAlert = true
+                            }
+                            .alert(isPresented: $showAlert) {
+                                Alert(
+                                    title: Text("Are you sure you want to remove " + item.donkki.name + " from your cart?"),
+                                    primaryButton: .default(
+                                        Text("Cancel")
+                                    ),
+                                    secondaryButton: .destructive(
+                                        Text("Delete"),
+                                        action: {
+                                            user.removeItem(item: item.donkki)
+                                        }
+                                    )
                                 )
-                            )
-                        }
-                } else {
-                    Image(systemName: "minus")
-                        .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-                        .frame(width: 30, height: 30)
-                        .background(Color.gray.opacity(0.2))
-                        .cornerRadius(20)
-                        .onTapGesture {
-                            user.removeItem(item: item.donkki)
-                        }
+                            }
+                    } else {
+                        Image(systemName: "minus")
+                            .renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
+                            .frame(width: 30, height: 30)
+                            .background(Color.gray.opacity(0.2))
+                            .cornerRadius(20)
+                            .onTapGesture {
+                                user.removeItem(item: item.donkki)
+                            }
+                    }
                 }
             }
             Image(item.donkki.image)

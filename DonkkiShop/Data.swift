@@ -27,6 +27,13 @@ struct Item: Identifiable {
     var amount: Int
 }
 
+struct Order: Identifiable {
+    let id = UUID()
+    let date: Date
+    var items: [Item]
+    var amount: Int
+}
+
 // This value, information, uses the Info structure to store all of the data used in your app
 // You can refer to this global variable by its name from any file of the project
 var donkkiList = [
@@ -37,6 +44,7 @@ var donkkiList = [
 
 class User: ObservableObject {
     @Published var cart = [Item]()
+    @Published var orders = [Order]()
     let name = "Gavin Eugenio"
     let email = "gavin.eugenio@gmail.com"
     
@@ -63,6 +71,11 @@ class User: ObservableObject {
                 }
             }
         }
+    }
+    
+    func addOrder() {
+        orders.append(Order(date: Date(), items: cart, amount: countItems()))
+        cart.removeAll()
     }
     
     func countItems() -> Int {

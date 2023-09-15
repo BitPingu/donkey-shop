@@ -23,6 +23,9 @@
 		86CDBE6C2A7D30A400F1F947 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 86CDBE6B2A7D30A400F1F947 /* AlertToast */; };
 		86CDBE6E2A86872600F1F947 /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE6D2A86872600F1F947 /* ItemCard.swift */; };
 		86CDBE702A95012300F1F947 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE6F2A95012300F1F947 /* CheckoutView.swift */; };
+		86CDBE722AB09C9500F1F947 /* MyDonkkisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE712AB09C9400F1F947 /* MyDonkkisView.swift */; };
+		86CDBE742AB2426200F1F947 /* OrderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE732AB2426200F1F947 /* OrderCard.swift */; };
+		86CDBE762AB3846600F1F947 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE752AB3846600F1F947 /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		86CDBE682A7801AF00F1F947 /* HelpCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCard.swift; sourceTree = "<group>"; };
 		86CDBE6D2A86872600F1F947 /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
 		86CDBE6F2A95012300F1F947 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		86CDBE712AB09C9400F1F947 /* MyDonkkisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDonkkisView.swift; sourceTree = "<group>"; };
+		86CDBE732AB2426200F1F947 /* OrderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCard.swift; sourceTree = "<group>"; };
+		86CDBE752AB3846600F1F947 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				86CDBE6D2A86872600F1F947 /* ItemCard.swift */,
 				86CDBE642A7416A800F1F947 /* DonkkiView.swift */,
 				86CDBE5C2A72C34A00F1F947 /* AccountView.swift */,
+				86CDBE712AB09C9400F1F947 /* MyDonkkisView.swift */,
+				86CDBE732AB2426200F1F947 /* OrderCard.swift */,
+				86CDBE752AB3846600F1F947 /* OrderView.swift */,
 				86CDBE5E2A72C46400F1F947 /* CartView.swift */,
 				86CDBE6F2A95012300F1F947 /* CheckoutView.swift */,
 				86CDBE602A72C73000F1F947 /* HelpView.swift */,
@@ -181,8 +190,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				86CDBE5D2A72C34A00F1F947 /* AccountView.swift in Sources */,
+				86CDBE762AB3846600F1F947 /* OrderView.swift in Sources */,
 				86CDBE672A742D5D00F1F947 /* DonkkiCard.swift in Sources */,
 				86CDBE2E2A6EFF3C00F1F947 /* ContentView.swift in Sources */,
+				86CDBE742AB2426200F1F947 /* OrderCard.swift in Sources */,
 				86CDBE632A72CB0900F1F947 /* GridView.swift in Sources */,
 				86CDBE5F2A72C46400F1F947 /* CartView.swift in Sources */,
 				86CDBE652A7416A800F1F947 /* DonkkiView.swift in Sources */,
@@ -192,6 +203,7 @@
 				86CDBE5B2A72C0D900F1F947 /* HomeView.swift in Sources */,
 				86CDBE592A72B61500F1F947 /* Data.swift in Sources */,
 				86CDBE6E2A86872600F1F947 /* ItemCard.swift in Sources */,
+				86CDBE722AB09C9500F1F947 /* MyDonkkisView.swift in Sources */,
 				86CDBE692A7801AF00F1F947 /* HelpCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
