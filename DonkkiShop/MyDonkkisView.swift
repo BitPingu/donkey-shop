@@ -12,9 +12,10 @@ struct MyDonkkisView: View {
     
     var body: some View {
         VStack {
-            Text("My Donkkis")
+            Text("My Orders")
                 .foregroundColor(.primary)
-                .font(.headline)
+                .font(.title)
+                .bold()
             if user.orders.isEmpty {
                 Spacer()
                 Text("You have no orders.")
@@ -27,7 +28,7 @@ struct MyDonkkisView: View {
                         OrderCard(order: order)
                     }
                 }
-                .padding()
+                .padding([.bottom], 10)
             }
         }
         .padding([.top], -40)

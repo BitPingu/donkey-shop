@@ -23,7 +23,7 @@ struct ItemCard: View {
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(20)
                         .onTapGesture {
-                            user.addItem(item: item.donkki)
+                            user.curOrder.addItem(item: item.donkki)
                         }
                     Spacer().frame(height: 20)
                     if (item.amount == 1) {
@@ -44,7 +44,7 @@ struct ItemCard: View {
                                     secondaryButton: .destructive(
                                         Text("Delete"),
                                         action: {
-                                            user.removeItem(item: item.donkki)
+                                            user.curOrder.removeItem(item: item.donkki)
                                         }
                                     )
                                 )
@@ -56,7 +56,7 @@ struct ItemCard: View {
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(20)
                             .onTapGesture {
-                                user.removeItem(item: item.donkki)
+                                user.curOrder.removeItem(item: item.donkki)
                             }
                     }
                 }

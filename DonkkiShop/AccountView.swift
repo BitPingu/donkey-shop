@@ -30,7 +30,7 @@ struct AccountView: View {
             }
             VStack(alignment: .leading) {
                 NavigationLink(destination: MyDonkkisView()) {
-                    HelpCard(text: "My Donkkis")
+                    HelpCard(text: "My Orders")
                 }
                 Divider()
                 NavigationLink(destination: GridView()) {

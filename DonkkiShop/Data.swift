@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 // This file is where your app stores all of its data (information)
 // In SwiftUI, it's best to keep the data separate from the visual components of your app
@@ -30,57 +31,38 @@ struct Item: Identifiable {
 struct Order: Identifiable {
     let id = UUID()
     let date: Date
-    var items: [Item]
+    var cart: [Item]
     var amount: Int
-}
-
-// This value, information, uses the Info structure to store all of the data used in your app
-// You can refer to this global variable by its name from any file of the project
-var donkkiList = [
-    Donkki(name: "Don", price: 1.99, image: "donkey"),
-    Donkki(name: "Nikki", price: 2.99, image: "donkey"),
-    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
-]
-
-class User: ObservableObject {
-    @Published var cart = [Item]()
-    @Published var orders = [Order]()
-    let name = "Gavin Eugenio"
-    let email = "gavin.eugenio@gmail.com"
     
-    func addItem(item: Donkki) {
+    mutating func addItem(item: Donkki) {
         var exists = false
-        for (index, element) in self.cart.enumerated() {
+        for (index, element) in cart.enumerated() {
             if (element.donkki.name == item.name) {
-                self.cart[index].amount += 1
+                cart[index].amount += 1
                 exists = true
             }
         }
         if (!exists) {
-            self.cart.append(Item(donkki: item, amount: 1))
+            cart.append(Item(donkki: item, amount: 1))
         }
+        amount = countItems()
     }
     
-    func removeItem(item: Donkki) {
-        for (index, element) in self.cart.enumerated() {
+    mutating func removeItem(item: Donkki) {
+        for (index, element) in cart.enumerated() {
             if (element.donkki.name == item.name) {
                 if (element.amount > 1) {
-                    self.cart[index].amount -= 1
+                    cart[index].amount -= 1
                 } else {
-                    self.cart.remove(at: index)
+                    cart.remove(at: index)
                 }
             }
         }
     }
     
-    func addOrder() {
-        orders.append(Order(date: Date(), items: cart, amount: countItems()))
-        cart.removeAll()
-    }
-    
     func countItems() -> Int {
         var count = 0
-        for item in self.cart {
+        for item in cart {
             count += item.amount
         }
         return count
@@ -92,7 +74,7 @@ class User: ObservableObject {
     
     func subtotal() -> Float {
         var cost = Float(0)
-        for item in self.cart {
+        for item in cart {
             cost += itemTotal(item: item)
         }
         return cost
@@ -100,7 +82,7 @@ class User: ObservableObject {
     
     func shippingTotal() -> Float {
         var cost = Float(0)
-        for item in self.cart {
+        for item in cart {
             cost += 0.5 * Float(item.amount)
         }
         return cost
@@ -116,5 +98,37 @@ class User: ObservableObject {
     
     func orderTotal() -> Float {
         return subShippingTotal() + taxTotal()
+    }
+}
+
+// This value, information, uses the Info structure to store all of the data used in your app
+// You can refer to this global variable by its name from any file of the project
+var donkkiList = [
+    Donkki(name: "Don", price: 1.99, image: "donkey"),
+    Donkki(name: "Nikki", price: 2.99, image: "donkey"),
+    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
+]
+
+class User: ObservableObject {
+    @Published var curOrder = Order(date: Date(), cart: [Item](), amount: 0)
+    @Published var orders = [Order]()
+    let name = "Gavin Eugenio"
+    let email = "gavin.eugenio@gmail.com"
+    
+//    When wanting to update objects that are inside an object (curOrder is an object)
+//    var anyCancellable: AnyCancellable? = nil
+//    init() {
+//        anyCancellable = curOrder.objectWillChange.sink { [weak self] (_) in
+//            self?.objectWillChange.send()
+//        }
+//    }
+    
+    func addOrder() {
+        orders.append(curOrder)
+    }
+    
+    func newOrder() {
+        // clears current order
+        curOrder = Order(date: Date(), cart: [Item](), amount: 0)
     }
 }

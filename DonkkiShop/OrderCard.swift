@@ -14,12 +14,8 @@ struct OrderCard: View {
     
     var body: some View {
         HStack {
-            Image(order.items[0].donkki.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 90.0, height: 90.0)
             VStack(alignment: .leading, spacing: 3) {
-                order.amount == 1 ? Text(String(order.amount) + " item") : Text(String(order.amount) + " items")
+                Text("Order # " + String(order.id.uuidString.hashValue))
                     .foregroundColor(.primary)
                     .font(.headline)
                 let _ = dateFormatter.dateFormat = "MMM d, y"

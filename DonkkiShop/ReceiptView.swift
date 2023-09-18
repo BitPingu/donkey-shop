@@ -1,49 +1,48 @@
 //
-//  CheckoutView.swift
+//  ReceiptView.swift
 //  DonkkiShop
 //
-//  Created by Gavin on 2023-08-22.
+//  Created by Gavin on 2023-09-18.
 //
 
 import SwiftUI
 
-struct CheckoutView: View {
-    @EnvironmentObject var user: User
+struct ReceiptView: View {
     @Binding var isActive: Bool
-    @Binding var checkOrder: Bool
+    var order: Order
     
     var body: some View {
         VStack(alignment: .leading) {
             VStack {
-                Text("Shipping to: " + user.name)
+                Text("Order Receipt")
                 Divider()
-                ForEach(user.curOrder.cart) { item in
+                ForEach(order.cart) { item in
                     HStack {
                         Text(item.donkki.name + " (" + String(item.amount) + "):")
                         Spacer()
-                        Text("$" + String(format: "%.2f", user.curOrder.itemTotal(item: item)))
+                        Text("$" + String(format: "%.2f", order.itemTotal(item: item)))
                     }
                 }
                 HStack {
                     Text("Subtotal:")
                     Spacer()
-                    Text("$" + String(format: "%.2f", user.curOrder.subtotal()))
+                    Text("$" + String(format: "%.2f", order.subtotal()))
                 }
                 Spacer().frame(height: 20)
                 HStack {
                     Text("Shipping & Handling:")
                     Spacer()
-                    Text("$" + String(format: "%.2f", user.curOrder.shippingTotal()))
+                    Text("$" + String(format: "%.2f", order.shippingTotal()))
                 }
                 HStack {
                     Text("Total before tax:")
                     Spacer()
-                    Text("$" + String(format: "%.2f", user.curOrder.subShippingTotal()))
+                    Text("$" + String(format: "%.2f", order.subShippingTotal()))
                 }
                 HStack {
                     Text("Estimated GST/HST:")
                     Spacer()
-                    Text("$" + String(format: "%.2f", user.curOrder.taxTotal()))
+                    Text("$" + String(format: "%.2f", order.taxTotal()))
                 }
                 Spacer().frame(height: 20)
                 HStack {
@@ -51,25 +50,13 @@ struct CheckoutView: View {
                         .foregroundColor(.primary)
                         .font(.headline)
                     Spacer()
-                    Text("$" + String(format: "%.2f", user.curOrder.orderTotal()))
+                    Text("$" + String(format: "%.2f", order.orderTotal()))
                         .foregroundColor(.primary)
                         .font(.headline)
                 }
             }
             .padding([.leading, .trailing], 20)
-            Spacer()
-            Button(action: {
-                print("order placed")
-                user.addOrder()
-                user.newOrder()
-                checkOrder = true
-                self.isActive.toggle()
-            }, label: {
-                Text("Place your order")
-                    .frame(maxWidth: .infinity)
-            })
-            .buttonStyle(.borderedProminent)
-            .padding([.leading, .trailing, .bottom], 10)
+            Spacer() 
         }
         .padding([.top], -40)
     }

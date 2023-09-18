@@ -31,7 +31,7 @@ struct DonkkiView: View {
                     .font(.title2)
                 Spacer().frame(height: 20)
                 Button("Add to Cart") {
-                    user.addItem(item: donkki)
+                    user.curOrder.addItem(item: donkki)
                     showAlert.toggle()
                     buttonDelay = true
                     DispatchQueue.global(qos: .background).async {
