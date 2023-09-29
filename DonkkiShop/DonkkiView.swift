@@ -17,7 +17,7 @@ struct DonkkiView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Image(donkki.image)
+            donkki.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity, maxHeight: 400.0)
@@ -26,7 +26,7 @@ struct DonkkiView: View {
                 Text(donkki.name)
                     .foregroundColor(.primary)
                     .font(.title)
-                Text("$" + String(donkki.price))
+                Text(String(format: "$%.2f", donkki.price))
                     .foregroundColor(.secondary)
                     .font(.title2)
                 Spacer().frame(height: 20)

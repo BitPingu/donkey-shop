@@ -12,7 +12,7 @@ struct DonkkiCard: View {
     
     var body: some View {
         HStack {
-            Image(donkki.image)
+            donkki.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 90.0, height: 90.0)
@@ -20,7 +20,7 @@ struct DonkkiCard: View {
                 Text(donkki.name)
                     .foregroundColor(.primary)
                     .font(.headline)
-                Text("$" + String(donkki.price))
+                Text(String(format: "$%.2f", donkki.price))
                     .foregroundColor(.secondary)
                     .font(.subheadline)
             }

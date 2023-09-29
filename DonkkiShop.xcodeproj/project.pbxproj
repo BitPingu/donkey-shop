@@ -27,6 +27,7 @@
 		86CDBE742AB2426200F1F947 /* OrderCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE732AB2426200F1F947 /* OrderCard.swift */; };
 		86CDBE762AB3846600F1F947 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE752AB3846600F1F947 /* OrderView.swift */; };
 		86CDBE782AB8A43000F1F947 /* ReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE772AB8A42F00F1F947 /* ReceiptView.swift */; };
+		86CDBE7A2AB9E02C00F1F947 /* NewDonkkiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDBE792AB9E02C00F1F947 /* NewDonkkiView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		86CDBE732AB2426200F1F947 /* OrderCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCard.swift; sourceTree = "<group>"; };
 		86CDBE752AB3846600F1F947 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		86CDBE772AB8A42F00F1F947 /* ReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptView.swift; sourceTree = "<group>"; };
+		86CDBE792AB9E02C00F1F947 /* NewDonkkiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDonkkiView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				86CDBE772AB8A42F00F1F947 /* ReceiptView.swift */,
 				86CDBE602A72C73000F1F947 /* HelpView.swift */,
 				86CDBE682A7801AF00F1F947 /* HelpCard.swift */,
+				86CDBE792AB9E02C00F1F947 /* NewDonkkiView.swift */,
 				86CDBE622A72CB0900F1F947 /* GridView.swift */,
 				86CDBE582A72B61500F1F947 /* Data.swift */,
 				86CDBE2F2A6EFF4000F1F947 /* Assets.xcassets */,
@@ -209,6 +212,7 @@
 				86CDBE6E2A86872600F1F947 /* ItemCard.swift in Sources */,
 				86CDBE722AB09C9500F1F947 /* MyDonkkisView.swift in Sources */,
 				86CDBE692A7801AF00F1F947 /* HelpCard.swift in Sources */,
+				86CDBE7A2AB9E02C00F1F947 /* NewDonkkiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

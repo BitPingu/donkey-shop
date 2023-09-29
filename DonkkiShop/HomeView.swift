@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var user: User
+    
     var body: some View {
-        List(donkkiList) { donkki in
+        List(user.donkkiList) { donkki in
             NavigationLink(destination: DonkkiView(donkki: donkki)) {
                 DonkkiCard(donkki: donkki)
             }

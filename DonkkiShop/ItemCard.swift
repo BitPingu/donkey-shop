@@ -61,7 +61,7 @@ struct ItemCard: View {
                     }
                 }
             }
-            Image(item.donkki.image)
+            item.donkki.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 90.0, height: 90.0)
@@ -69,7 +69,7 @@ struct ItemCard: View {
                 Text(item.donkki.name + " (" + String(item.amount) + ")")
                     .foregroundColor(.primary)
                     .font(.headline)
-                Text("$" + String(item.donkki.price))
+                Text(String(format: "$%.2f", item.donkki.price))
                     .foregroundColor(.secondary)
                     .font(.subheadline)
             }

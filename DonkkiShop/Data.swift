@@ -19,7 +19,7 @@ struct Donkki: Identifiable {
     let id = UUID()
     let name: String
     let price: Float
-    let image: String
+    let image: Image
 }
 
 struct Item: Identifiable {
@@ -101,19 +101,17 @@ struct Order: Identifiable {
     }
 }
 
-// This value, information, uses the Info structure to store all of the data used in your app
-// You can refer to this global variable by its name from any file of the project
-var donkkiList = [
-    Donkki(name: "Don", price: 1.99, image: "donkey"),
-    Donkki(name: "Nikki", price: 2.99, image: "donkey"),
-    Donkki(name: "Gavin", price: 3.99, image: "donkey"),
-]
-
 class User: ObservableObject {
     @Published var curOrder = Order(date: Date(), cart: [Item](), amount: 0)
     @Published var orders = [Order]()
     let name = "Gavin Eugenio"
     let email = "gavin.eugenio@gmail.com"
+    
+    @Published var donkkiList = [
+        Donkki(name: "Don", price: 1.99, image: Image("donkey")),
+        Donkki(name: "Nikki", price: 2.99, image: Image("donkey")),
+        Donkki(name: "Gavin", price: 3.99, image: Image("donkey")),
+    ]
     
 //    When wanting to update objects that are inside an object (curOrder is an object)
 //    var anyCancellable: AnyCancellable? = nil
@@ -130,5 +128,9 @@ class User: ObservableObject {
     func newOrder() {
         // clears current order
         curOrder = Order(date: Date(), cart: [Item](), amount: 0)
+    }
+    
+    func newDonkki(donkki: Donkki) {
+        donkkiList.append(donkki)
     }
 }
